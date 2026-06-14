@@ -8,6 +8,7 @@ export default function SignupPage() {
       <h1 className="font-display text-3xl font-bold text-center">
         Join <span className="text-gradient">Ragebait</span>
       </h1>
+
       <p className="mt-2 text-center text-sm text-white/50">
         Your Aura starts at zero. Make it count.
       </p>
@@ -18,6 +19,7 @@ export default function SignupPage() {
             <label htmlFor="username" className="block text-sm font-medium text-white/70">
               Username
             </label>
+
             <input
               id="username"
               name="username"
@@ -27,6 +29,7 @@ export default function SignupPage() {
               className="mt-1.5 w-full rounded-xl border border-line bg-surface2 px-4 py-3 text-sm text-white placeholder:text-white/30 focus-visible:border-aura-purple"
               placeholder="Pick something unique"
             />
+
             <p className="mt-1 text-xs text-white/30">
               Usernames are unique platform-wide — no duplicates allowed.
             </p>
@@ -36,6 +39,7 @@ export default function SignupPage() {
             <label htmlFor="email" className="block text-sm font-medium text-white/70">
               Email
             </label>
+
             <input
               id="email"
               name="email"
@@ -49,9 +53,10 @@ export default function SignupPage() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-white/70">
+              <label htmlFor="password" className="block text-sm text-white/70">
                 Password
               </label>
+
               <input
                 id="password"
                 name="password"
@@ -62,10 +67,12 @@ export default function SignupPage() {
                 placeholder="••••••••"
               />
             </div>
+
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-white/70">
+              <label htmlFor="confirmPassword" className="block text-sm text-white/70">
                 Confirm
               </label>
+
               <input
                 id="confirmPassword"
                 name="confirmPassword"
@@ -82,6 +89,7 @@ export default function SignupPage() {
             <label htmlFor="dob" className="block text-sm font-medium text-white/70">
               Date of birth
             </label>
+
             <input
               id="dob"
               name="dob"
@@ -96,7 +104,7 @@ export default function SignupPage() {
           </Button>
 
           <p className="text-center text-xs text-white/30">
-            We'll send a one-time code to verify your email before you can battle.
+            We&apos;ll send a one-time code to verify your email before you can battle.
           </p>
         </form>
       </Card>
