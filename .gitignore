@@ -1,3 +1,5 @@
 ragebait/ 
 node_modules/ 
 .next/ 
+.vercel
+.env*

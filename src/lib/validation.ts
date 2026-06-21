@@ -38,12 +38,13 @@ export const loginSchema = z.object({
 });
 
 export const profileUpdateSchema = z.object({
-  bio: z.string().max(300, "Bio must be at most 300 characters").optional(),
-  avatar_url: z.string().url("Enter a valid URL").optional().or(z.literal("")),
+  bio: z.string().max(300, "Bio must be at most 300 characters").optional().default(""),
+  avatarUrl: z.string().optional().default(""),
 });
 
 export const groupSchema = z.object({
   name: z.string().min(3, "Group name must be at least 3 characters").max(60),
-  description: z.string().max(300).optional(),
-  topic: z.string().min(1).max(60).optional(),
+  description: z.string().max(300).optional().default(""),
+  topics: z.array(z.string().min(1).max(60)).min(1, "Pick at least one topic").max(5),
+  bannerUrl: z.string().optional().default(""),
 });
