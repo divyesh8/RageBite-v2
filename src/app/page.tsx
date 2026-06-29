@@ -12,7 +12,13 @@ interface BattleListItem {
   topic: string;
   battle_type: string;
   mode: string;
-  status: "open" | "live" | "judging" | "completed" | "cancelled";
+  status:
+    | "open"
+    | "waiting"
+    | "active"
+    | "judging"
+    | "completed"
+    | "cancelled";
   creator_username: string;
   creator_avatar: string;
   opponent_username: string | null;
@@ -88,7 +94,7 @@ export default function HomePage() {
       .finally(() => setLoading(false));
   }, []);
 
-  const liveBattles = battles.filter((b) => b.status === "live");
+  const liveBattles = battles.filter((b) => b.status === "active");
   const featuredBattles = battles.slice(0, 3);
   const topLeaders = leaderboard.slice(0, 5);
 
@@ -162,7 +168,7 @@ export default function HomePage() {
                       <span className="rounded-full bg-surface2 px-3 py-1 text-xs font-medium uppercase tracking-wide text-aura-purple">
                         {battle.topic}
                       </span>
-                      {battle.status === "live" ? (
+                      {battle.status === "active" ? (
                         <span className="flex items-center gap-1.5 text-xs font-medium text-aura-crimson">
                           <span className="h-1.5 w-1.5 animate-pulseGlow rounded-full bg-aura-crimson" />
                           LIVE
